@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  color: aliceblue;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1d21, #1f2125, #282428, #2d2c2f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2rem;
+}
+.app__title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.app__info {
+  font-family: courier;
+  line-height: 1.5em;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  font-size: 25px;
+}
+.magicball__outer {
+  height: 300px;
+  width: 300px;
+  background: #111;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  box-shadow: 10px 10px 30px rgba(13, 15, 12), -10px -10px 30px #4a4a4a;
+  position: relative;
+  cursor: pointer;
+}
+.magicball__inner {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+.magicball__responses {
+  color: #1a1d21;
+  font-size: 8rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+.magicball__spotLight {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 5px;
+  border-radius: 50%;
+  background: #333;
+  opacity: 0.2;
+}
+.magicball__bgShadow {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  top: 0px;
+  border-radius: 50%;
+  background: #666;
+  opacity: 0.2;
+}
+.magicball__upperShadow {
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  top: 5px;
+  border-radius: 50%;
+  background: #979696;
+  opacity: 0.2;
+}
+.magicball__lowerShadow {
+  position: absolute;
+  width: 225px;
+  height: 150px;
+  bottom: 3px;
+  border-radius: 50%;
+  background: #393737;
+  opacity: 0.2;
+}
+.animate {
+  animation-name: shake-it;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: backwards;
+}
+
+@keyframes shake-it {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1, 1.1);
+  }
+  10% {
+    transform: translate(10px, 10px) rotate(30deg) scale(1.3, 1.1);
+  }
+  20% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1, 1.2);
+  }
+  30% {
+    transform: translate(-10px, 10px) rotate(-30deg) scale(1.5, 1.1);
+  }
+  40% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1, 1.3);
+  }
+  50% {
+    transform: translate(-10px, 10px) rotate(45deg) scale(1.2, 1.1);
+  }
+  60% {
+    transform: translate(0, 0) rotate(-15deg) scale(1.4, 1.1);
+  }
+  70% {
+    transform: translate(10px, 10px) rotate(180deg) scale(1.1, 1.3);
+  }
+  80% {
+    transform: translate(0, 0) rotate(0deg) scale(1.1, 1.3);
+  }
+  90% {
+    transform: translate(-10px, 10px) rotate(360deg) scale(1, 1);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
